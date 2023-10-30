@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {
-  ProfileCard,
+  Profile,
   Description,
   Avatar,
   Name,
   Tag,
   Location,
-  StatsList,
+  Stats,
   StatsItem,
   Label,
   Quantity,
