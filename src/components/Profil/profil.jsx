@@ -1,21 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {
-  ProfileCard,
-  Description,
-  Avatar,
-  Name,
-  Tag,
-  Location,
-  StatsList,
-  StatsItem,
-  Label,
-  Quantity,
+  username,
+  tag,
+  location,
+  avatar,
+  stats,
+  
 } from './Profile.styled';
 
 export const Profile = ({ username, avatar, tag, location, stats }) => {
   return (
-    <ProfileCard>
+    <Profile>
       <Description>
         <Avatar src={avatar} alt="User avatar" />
         <Name>{username}</Name>
@@ -23,7 +19,7 @@ export const Profile = ({ username, avatar, tag, location, stats }) => {
         <Location>{location}</Location>
       </Description>
 
-      <StatsList>
+      <Stats>
         <StatsItem>
           <Label>Followers</Label>
           <Quantity>{stats.followers}</Quantity>
@@ -36,19 +32,7 @@ export const Profile = ({ username, avatar, tag, location, stats }) => {
           <Label>Likes</Label>
           <Quantity>{stats.likes}</Quantity>
         </StatsItem>
-      </StatsList>
-    </ProfileCard>
+      </Stats>
+    </Profile>
   );
-};
-
-Profile.propTypes = {
-  username: PropTypes.string.isRequired,
-  avatar: PropTypes.string.isRequired,
-  tag: PropTypes.string.isRequired,
-  location: PropTypes.string.isRequired,
-  stats: PropTypes.shape({
-    followers: PropTypes.number.isRequired,
-    views: PropTypes.number.isRequired,
-    likes: PropTypes.number.isRequired,
-  }).isRequired,
 };
