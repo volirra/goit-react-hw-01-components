@@ -1,12 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {
-  username,
-  tag,
-  location,
-  avatar,
-  stats,
-  
+  ProfileCard,
+  Description,
+  Avatar,
+  Name,
+  Tag,
+  Location,
+  StatsList,
+  StatsItem,
+  Label,
+  Quantity,
 } from './Profile.styled';
 
 export const Profile = ({ username, avatar, tag, location, stats }) => {
