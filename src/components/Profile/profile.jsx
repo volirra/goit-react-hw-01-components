@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {
-  Profile,
+  ProfileCard,
   Description,
   Avatar,
   Name,
@@ -15,7 +15,7 @@ import {
 
 export const Profile = ({ username, avatar, tag, location, stats }) => {
   return (
-    <Profile>
+    <ProfileCard>
       <Description>
         <Avatar src={avatar} alt="User avatar" />
         <Name>{username}</Name>
@@ -37,7 +37,7 @@ export const Profile = ({ username, avatar, tag, location, stats }) => {
           <Quantity>{stats.likes}</Quantity>
         </StatsItem>
       </Stats>
-    </Profile>
+    </ProfileCard>
   );
 };
 
