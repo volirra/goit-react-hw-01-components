@@ -4,7 +4,7 @@ export const FriendItem = styled.li`
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 42px;
+  gap: 45px;
   margin: 0 auto;
   padding: ${props => props.theme.space[3]}px;
 
