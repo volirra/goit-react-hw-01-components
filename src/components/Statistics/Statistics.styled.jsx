@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { getRandomHexColor } from '../../utils/getRandomHexColor';
 
 export const Section = styled.section`
   display: flex;
@@ -59,9 +58,7 @@ export const StatListItem = styled.li`
   :last-child {
     border-bottom-right-radius: 0.5rem;
   }
-
-  background-color: ${props => getRandomHexColor(props.index)};
-`;
+ `;
 
 export const Label = styled.span`
   font-size: 0.8rem;
