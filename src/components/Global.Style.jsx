@@ -16,7 +16,6 @@ export const GlobalStyle = createGlobalStyle`
       monospace;
   }
 
-
   img {
     display: block;
     max-width: 100%;

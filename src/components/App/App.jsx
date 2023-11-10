@@ -12,7 +12,7 @@ import { FriendListItem } from '../FriendList/FriendListItem';
 import transactions from '../TransactionHistory/transactions.json';
 import { TransactionHistory } from '../TransactionHistory/TransactionHistory';
 
-import { GlobalStyle } from '..Global.Style.';
+import { GlobalStyle } from '../Global.Style';
 
 export const App = () => {
   return (
