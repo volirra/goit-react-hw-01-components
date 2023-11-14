@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { getRandomColor } from './getRandomColor';
 import {
   StatSection,
   Title,
