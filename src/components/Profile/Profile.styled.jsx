@@ -1,109 +1,77 @@
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 
-export const ProfileCard = styled.div`
+export const ProfileDiv = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 10px;
-
-  margin: 0 auto;
-  margin-bottom: ${props => props.theme.space[5]}px;
-  padding: ${props => props.theme.space[4]}px;
-
-  max-width: 100%;
-  width: 360px;
-
-  border-radius: ${props => props.theme.radii.medium};
-  box-shadow: -1px -1px 1px #fff, 1px 1px 1px #babecc;
-  background-color: ${props => props.theme.colors.background};
+  padding-top: 60px;
+  padding-bottom: 60px;
 `;
-
 export const Description = styled.div`
+  background-color: #f4f0ec;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: ${props => props.theme.space[4]}px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 350px;
+  box-shadow: 1rem 6rem 3rem rgb(65, 64, 64), -1rem -1rem 3rem rgb(82, 81, 81);
 `;
-
 export const Avatar = styled.img`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  height: 150px;
-  width: 150px;
-
-  border-radius: 50%;
-  box-shadow: -3px -3px 7px #ffffff, 3px 3px 5px #ceced1;
-
-  &:hover {
-    background: #ecf0f3;
-    box-shadow: inset -3px -3px 7px #ffffff, inset 3px 3px 5px #ceced1;
-  }
+  display: block;
+  width: 200px;
+  margin-top: 20px;
+  border-radius: 5px;
 `;
-
-export const Info = styled.p`
-  color: ${props => props.theme.colors.accent};
-  text-shadow: 1px 1px 1px ${props => props.theme.colors.white};
-  font-family: ${props => props.theme.fonts.heading};
-  font-size: ${props => props.theme.fontSizes.m};
+export const Name = styled.p`
+  font-size: 22px;
+  line-height: 1.62;
+  font-weight: 20px;
+  color: #000000;
+  margin-top: 20px;
 `;
-
-export const Name = styled(Info)`
-  color: ${props => props.theme.colors.accent};
-  font-size: ${props => props.theme.fontSizes.l};
-  font-weight: 500;
-`;
-
-export const Tag = styled(Info)`
-  color: ${props => props.theme.colors.primary};
-`;
-
-export const Location = styled(Info)`
-  color: ${props => props.theme.colors.secondary};
-`;
-
-export const StatsList = styled.ul`
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  align-items: center;
-  padding: ${props => props.theme.space[4]}px;
-  width: 100%;
-`;
-
-export const StatsItem = styled.li`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  width: 100%;
-
-  &:hover {
-    background: #ecf0f3;
-    box-shadow: inset -3px -3px 7px #ffffff, inset 3px 3px 5px #ceced1;
-  }
-
-  :not(:last-child) {
-    border-right: 1px dotted ${props => props.theme.colors.primary};
-  }
-`;
-
-export const StatsInfo = styled.span`
-  margin: 0px 5px;
-  color: ${props => props.theme.colors.primary};
+export const Text = styled.p`
+  margin-top: 10px;
   font-size: 16px;
+  line-height: 1.58;
+  font-weight: 18px;
 `;
-
-export const Label = styled(StatsInfo)`
-  font-weight: 400;
+export const Stats = styled.ul`
+  background-color: #fff;
+  width: 350px;
+  display: flex;
+  margin: 0 auto;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 `;
-
-export const Quantity = styled(StatsInfo)`
-  color: ${props => props.theme.colors.secondary};
-  text-shadow: 1px 1px 1px #fff;
-  font-weight: ${props => props.theme.fontWeights.bold};
+export const StatsList = styled.li`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+  border-top: 1px solid #101030;
+  :not(:last-child) {
+    border-right: 1px solid #101030;
+  }
+  :not(:last-child) span {
+    border-right: none;
+  }
+`;
+export const SpanLabel = styled.span`
+  display: flex;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  justify-content: center;
+`;
+export const SpanQuantity = styled.span`
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.58;
+  font-weight: bold;
+  margin: 10px auto;
 `;

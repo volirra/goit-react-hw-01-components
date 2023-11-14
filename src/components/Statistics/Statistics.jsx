@@ -1,36 +1,43 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import {
-  Section,
+  StatSection,
   Title,
   StatList,
-  StatListItem,
-  Label,
-  Percentage,
+  StatItem,
+  StatLabel,
+  StatPercentage,
 } from './Statistics.styled';
 
-export const Statistics = ({ stats, title }) => {
+const Statistics = ({ title, stats }) => {
   return (
-    <Section>
+    <StatSection>
       {title && <Title>{title}</Title>}
+
       <StatList>
-        {stats.map((item, idx) => (
-          <StatListItem key={item.id} id={item.id} index={idx}>
-            <Label>{item.label}</Label>
-            <Percentage>{item.percentage}%</Percentage>
-          </StatListItem>
+        {stats.map(stat => (
+          <StatItem
+            key={stat.id}
+            style={{ backgroundColor: getRandomColor() }}
+            ß
+          >
+            <StatLabel>{stat.label}</StatLabel>
+            <StatPercentage>{stat.percentage}%</StatPercentage>
+          </StatItem>
         ))}
       </StatList>
-    </Section>
+    </StatSection>
   );
 };
+
 Statistics.propTypes = {
   title: PropTypes.string,
   stats: PropTypes.arrayOf(
-    PropTypes.shape({
+    PropTypes.exact({
       id: PropTypes.string.isRequired,
       label: PropTypes.string.isRequired,
       percentage: PropTypes.number.isRequired,
-    }).isRequired
+    })
   ).isRequired,
 };
+
+export default Statistics;
